@@ -500,7 +500,7 @@ def main():
             try:
                 id_image = Image.open(id_file)
                 st.markdown("**Original Image:**")
-                st.image(id_image, use_column_width=True)
+                st.image(id_image, use_container_width=True)
                 
                 # Store in session state for verification
                 st.session_state['id_image'] = id_image
@@ -522,7 +522,7 @@ def main():
             try:
                 selfie_image = Image.open(selfie_file)
                 st.markdown("**Original Image:**")
-                st.image(selfie_image, use_column_width=True)
+                st.image(selfie_image, use_container_width=True)
                 
                 # Store in session state for verification
                 st.session_state['selfie_image'] = selfie_image
@@ -599,11 +599,11 @@ def main():
             
             with col1:
                 st.markdown("**ID Document Face:**")
-                st.image(id_face_cropped, use_column_width=True)
+                st.image(id_face_cropped, use_container_width=True)
             
             with col2:
                 st.markdown("**Selfie Face:**")
-                st.image(selfie_face_cropped, use_column_width=True)
+                st.image(selfie_face_cropped, use_container_width=True)
             
             st.divider()
             
