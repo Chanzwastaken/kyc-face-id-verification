@@ -130,7 +130,25 @@ def inject_custom_css():
         
         /* Sidebar styling */
         [data-testid="stSidebar"] {
-            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(180deg, #1a1f36 0%, #0f1419 100%);
+        }
+        
+        /* Sidebar text color */
+        [data-testid="stSidebar"] * {
+            color: #ffffff !important;
+        }
+        
+        /* Sidebar headers */
+        [data-testid="stSidebar"] h1,
+        [data-testid="stSidebar"] h2,
+        [data-testid="stSidebar"] h3,
+        [data-testid="stSidebar"] h4 {
+            color: #ffffff !important;
+        }
+        
+        /* Sidebar markdown text */
+        [data-testid="stSidebar"] .stMarkdown {
+            color: #e0e0e0 !important;
         }
         
         /* Expander styling */
@@ -482,7 +500,7 @@ def main():
             try:
                 id_image = Image.open(id_file)
                 st.markdown("**Original Image:**")
-                st.image(id_image, use_container_width=True)
+                st.image(id_image, use_column_width=True)
                 
                 # Store in session state for verification
                 st.session_state['id_image'] = id_image
@@ -504,7 +522,7 @@ def main():
             try:
                 selfie_image = Image.open(selfie_file)
                 st.markdown("**Original Image:**")
-                st.image(selfie_image, use_container_width=True)
+                st.image(selfie_image, use_column_width=True)
                 
                 # Store in session state for verification
                 st.session_state['selfie_image'] = selfie_image
@@ -581,11 +599,11 @@ def main():
             
             with col1:
                 st.markdown("**ID Document Face:**")
-                st.image(id_face_cropped, use_container_width=True)
+                st.image(id_face_cropped, use_column_width=True)
             
             with col2:
                 st.markdown("**Selfie Face:**")
-                st.image(selfie_face_cropped, use_container_width=True)
+                st.image(selfie_face_cropped, use_column_width=True)
             
             st.divider()
             
