@@ -7,6 +7,11 @@ A **production-grade KYC (Know Your Customer) identity verification system** pow
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
+<img width="661" height="909" alt="image" src="https://github.com/user-attachments/assets/eb688494-2c11-438b-9b21-b7dbebf71191" />
+
+DEMO: 
+https://kyc-face-id-verification.streamlit.app/
+
 ## ✨ Features
 
 ### 🎨 Professional UI/UX
